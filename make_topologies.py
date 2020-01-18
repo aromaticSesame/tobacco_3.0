@@ -253,6 +253,7 @@ for i in range(0,len(topologies_all)):
 				edge_overlap_to_add.append(edge_overlap_idx)
 		edge_overlap_indices += edge_overlap_to_add
 
+		#Make sure the right number of edges are detected
 		if len(edge_overlap_indices) != cn:
 			warnings.warn('Error: '+topology+'. Incorrect number of edges',Warning)
 			pm_structure.to(filename=os.path.join('templates_errors',topology+'.cif'))
@@ -264,40 +265,47 @@ for i in range(0,len(topologies_all)):
 		bonded_set = []
 		for bond_dist in bond_dists:
 
+			#Get all vertices in bond_dist to vertex j
 			vertices_shell_temp = pm_structure.get_neighbors_in_shell(pm_structure[vertex_idx].coords,bond_dist,2*tol,include_index=True,include_image=True)	
 			vertices_shell = [k for k in vertices_shell_temp if k[0].species_string != edge_center_name]
-			if len(vertices_shell) < cn:
-				warnings.warn('Error: '+topology+'. Could not find all vertices',Warning)
-				pm_structure.to(filename=os.path.join('templates_errors',topology+'.cif'))
-				bad = True
-				break
-			for vertex_shell in vertices_shell:
-				edges_shell2_temp = pm_structure.get_neighbors_in_shell(vertex_shell[0].coords,bond_dist/2,tol,include_index=True)
-				edges_shell2 = [k for k in edges_shell2_temp if k[0].species_string == edge_center_name]
-				for edge_shell2 in edges_shell2:
-					if edge_shell2[2] in edge_overlap_indices:
-						img_temp = vertex_shell[3].tolist()
+			vertices_shell_indices = [k[2] for k in vertices_shell]
+
+			#For each edge connected to vertex j
+			for edge_overlap_idx in edge_overlap_indices:
+
+				#Get all vertices in bond_dist/2 to edge center that are also within bond_dist to vertex j
+				vertices_shell2_temp = pm_structure.get_neighbors_in_shell(pm_structure[edge_overlap_idx].coords,bond_dist/2,tol,include_index=True)
+				vertices_shell2_indices = [k[2] for k in vertices_shell2_temp if k[0].species_string != edge_center_name and k[2] in vertices_shell_indices]
+
+				#For every bonded vertex, get properties
+				for vertex2_idx in vertices_shell2_indices:
+
+					#Get properties of the bonded vertex, but don't double-count entries
+					locs = np.where(vertices_shell_indices==vertex2_idx)[0].tolist()
+					for loc in locs:
+						bonded_vertex = vertices_shell[loc]
+						img_temp = bonded_vertex[3].tolist()
 						img = [int(ii) for ii in img_temp]
-						bonded_set_temp = [vertex_idx,vertex_shell[2],img]
-						if bonded_set_temp in bonded_set:
+						bonded_set_temp = [vertex_idx,bonded_vertex[2],img]
+						if bonded_set_temp not in bonded_set:
+							bonded_set.append(bonded_set_temp)
+							vertex_overlap_indices.append(bonded_vertex[2])
+							img_list.append(img)
+							d_list.append(pm_structure.get_distance(vertex_idx,bonded_vertex[2],jimage=img))
+							break
+						else:
 							continue
-						bonded_set.append(bonded_set_temp)
-						vertex_overlap_indices.append(vertex_shell[2])
-						img_list.append(img)
-						d_list.append(pm_structure.get_distance(vertex_idx,vertex_shell[2],jimage=img))
-
-		for vertex_overlap_idx in vertex_overlap_indices:
-			bonded_pairs.append([vertex_idx,vertex_overlap_idx])
-
-		if bad:
-			break
 
 		#Check coordination number
 		if len(vertex_overlap_indices) != cn:
-			warnings.warn('Error: '+topology+'. Could not match coordination number',Warning)
+			warnings.warn('Error: '+topology+'. Could not find all bonded vertices',Warning)
 			pm_structure.to(filename=os.path.join('templates_errors',topology+'.cif'))
 			bad = True
 			break
+
+		#Add set of bonded pair of indices to list
+		for vertex_overlap_idx in vertex_overlap_indices:
+			bonded_pairs.append([vertex_idx,vertex_overlap_idx])
 		
 	if bad:
 		continue
@@ -308,6 +316,8 @@ for i in range(0,len(topologies_all)):
 	#For every bonded pair, get bonding/symmetry info
 	done_dot_indices = [] #completed bond pairs with . symmetry
 	for j, bonded_pair in enumerate(bonded_pairs):
+
+		#Get distance/image properties
 		atom1 = pm_structure[bonded_pair[0]] #Vertex1
 		atom2 = pm_structure[bonded_pair[1]] #Vertex2
 		output_indices = [atom1.index+1,atom2.index+1] #indices to write in CIF

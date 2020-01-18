@@ -194,11 +194,11 @@ for i in range(0,len(topologies_all)):
 	else:
 		bond_dists.extend(d_tests)
 
-	#Make lattice constants > 2*bond dist
+	#Make lattice constants > bond dist
 	if np.max(bond_dists) < scale:
-		extend = (2+tol*2.001)*scale #make slightly more than 2x greater just in case...
+		extend = tol+scale
 	else:
-		extend = (2+tol*2.001)*np.max(bond_dists)
+		extend = tol+np.max(bond_dists)
 	n_supercells = [np.ceil(extend/cellpars[0]),np.ceil(extend/cellpars[1]),np.ceil(extend/cellpars[2])]
 	if n_supercells != [1,1,1]:
 		pm_structure.make_supercell(n_supercells)
@@ -218,8 +218,8 @@ for i in range(0,len(topologies_all)):
 	#Initialization
 	bonded_pairs = [] #list for the indices of bonded vertices
 	bonded_edge_centers = [] #list for the indices of bonded edge centers
-	img_list = [] #list for the image translation of the bonded vertices
-	d_list = [] #list of the minimum image distances for the bonded vertices
+	img_list = [] #list of image displacements
+	d_list = [] #list of bond distances
 
 	#Cycle through every vertex to find its bonded atoms
 	for j, vertex_idx in enumerate(vertices_indices):
@@ -228,27 +228,18 @@ for i in range(0,len(topologies_all)):
 		vertex_atom = pm_structure[vertex_idx] #Site object
 		cn = cn_vec[vertex_atom.species_string] #int
 		pm_structure[vertex_idx].index = j #store the index, excluding edge centers
-		bonded_pairs_for_vertex = []
 
 		#Make string containing fract position for atom j
 		pos_text += vertex_atom.species_string+str(j+1)+'     '+vertex_atom.species_string+'     '+str(np.round(vertex_atom.frac_coords[0],4))+'   '+str(np.round(vertex_atom.frac_coords[1],4))+'   '+str(np.round(vertex_atom.frac_coords[2],4))+'\n'
 		
-		#Find all overlapping edge centers and vertices
-		edge_overlap_indices_temp = []
-		vertex_overlap_indices_temp = []
+		#Find all edge centers connected to vertex j
+		edge_overlap_indices = []
 		for bond_dist in bond_dists:
-			loc_A = np.where(np.abs(dist_mat[vertex_idx,:]-bond_dist/2) < tol)[0].tolist()
-			for loc in loc_A:
-				if loc not in edge_overlap_indices_temp:
-					edge_overlap_indices_temp.append(loc)
-			loc_B = np.where(np.abs(dist_mat[vertex_idx,:]-bond_dist) < 2*tol)[0].tolist()	
-			for loc in loc_B:
-				if loc not in vertex_overlap_indices_temp:
-					vertex_overlap_indices_temp.append(loc)
-
-		#For sanity, ensure flagged edges are edges and flagged vertices are vertices
-		edge_overlap_indices = [idx for idx in edge_overlap_indices_temp if idx in edge_center_indices]
-		vertex_overlap_indices = [idx for idx in vertex_overlap_indices_temp if idx in vertices_indices]
+			edges_shell_temp = pm_structure.get_neighbors_in_shell(pm_structure[vertex_idx].coords,bond_dist/2,tol,include_index=True)
+			edges_shell = [k for k in edges_shell_temp if k[0].species_string == edge_center_name]
+			for edge_shell in edges_shell:
+				if edge_shell[2] not in edge_overlap_indices:
+					edge_overlap_indices.append(edge_shell[2])
 
 		#Check if an edge center must be counted again due to PBCs
 		edge_overlap_to_add = []
@@ -262,117 +253,52 @@ for i in range(0,len(topologies_all)):
 				edge_overlap_to_add.append(edge_overlap_idx)
 		edge_overlap_indices += edge_overlap_to_add
 
-		#Check number of nearby edges
-		if len(edge_overlap_indices) < cn:
-			warnings.warn('Error: '+topology+'. Could not find all edges',Warning)
+		if len(edge_overlap_indices) != cn:
+			warnings.warn('Error: '+topology+'. Incorrect number of edges',Warning)
 			pm_structure.to(filename=os.path.join('templates_errors',topology+'.cif'))
 			bad = True
 			break
 
-		if bad:
-			break
+		#Find all vertices bound to vertex j
+		vertex_overlap_indices = []
+		bonded_set = []
+		for bond_dist in bond_dists:
 
-		#Cycle through every edge center connected to vertex j
-		for edge_overlap_idx in edge_overlap_indices:
-			edge_overlap_atom = pm_structure[edge_overlap_idx]
-			jimage_temp = None
-
-			#Find vertices bound to edge center
-			vertex_overlap_indices2 = []
-			for bond_dist in bond_dists:
-				loc_C = np.where(np.abs(dist_mat[edge_overlap_idx,:]-bond_dist/2) < tol)[0].tolist()
-				for loc in loc_C:
-					if loc not in vertex_overlap_indices2:
-						vertex_overlap_indices2.append(loc)
-
-			#Only keep the vertex bound to original vertex j
-			bonded_vertex_idx = [idx for idx in vertex_overlap_indices2 if idx in vertex_overlap_indices]
-
-			#Check to see if vertex is bonded in a separate periodic image
-			if not bonded_vertex_idx:
-				for k in range(0,6):
-					if k == 0:
-						jimage = [1,0,0]
-					elif k == 1:
-						jimage = [0,1,0]
-					elif k == 2:
-						jimage = [0,0,1]
-					elif k == 3:
-						jimage = [1,1,0]
-					elif k == 4:
-						jimage = [0,1,1]
-					elif k == 5:
-						jimage = [1,1,1]
-
-					if bonded_vertex_idx:
-						break
-
-					for vertex_idx2 in vertices_indices:
-						if vertex_idx2 == vertex_idx:
-							continue
-						d_pbc = pm_structure.get_distance(vertex_idx,vertex_idx2,jimage=jimage)
-						if np.abs(d_pbc-scale) < tol and vertex_idx2 not in vertex_overlap_indices:
-							bonded_vertex_idx.append(vertex_idx2)
-							jimage_temp = jimage
-							break
-
-			#Make sure each bond has only two vertices
-			if not bonded_vertex_idx or len(bonded_vertex_idx) != 1:
-				warnings.warn('Error: '+topology+'. Could not find bonded vertex for atom'+str(vertex_idx)+' with bond center '+str(edge_overlap_idx),Warning)
+			vertices_shell_temp = pm_structure.get_neighbors_in_shell(pm_structure[vertex_idx].coords,bond_dist,2*tol,include_index=True,include_image=True)	
+			vertices_shell = [k for k in vertices_shell_temp if k[0].species_string != edge_center_name]
+			if len(vertices_shell) < cn:
+				warnings.warn('Error: '+topology+'. Could not find all vertices',Warning)
 				pm_structure.to(filename=os.path.join('templates_errors',topology+'.cif'))
 				bad = True
 				break
+			for vertex_shell in vertices_shell:
+				edges_shell2_temp = pm_structure.get_neighbors_in_shell(vertex_shell[0].coords,bond_dist/2,tol,include_index=True)
+				edges_shell2 = [k for k in edges_shell2_temp if k[0].species_string == edge_center_name]
+				for edge_shell2 in edges_shell2:
+					if edge_shell2[2] in edge_overlap_indices:
+						img_temp = vertex_shell[3].tolist()
+						img = [int(ii) for ii in img_temp]
+						bonded_set_temp = [vertex_idx,vertex_shell[2],img]
+						if bonded_set_temp in bonded_set:
+							continue
+						bonded_set.append(bonded_set_temp)
+						vertex_overlap_indices.append(vertex_shell[2])
+						img_list.append(img)
+						d_list.append(pm_structure.get_distance(vertex_idx,vertex_shell[2],jimage=img))
 
-			#Get image that the bonded vertex resides in
-			d_bond, img = vertex_atom.distance_and_image(pm_structure[bonded_vertex_idx[0]])
-			img = img.tolist()
-
-			#Account for duplicate vertex-vertex bonds (due to PBCs)
-			bonded_pair = [vertex_idx,bonded_vertex_idx[0]]
-			if bonded_pair in bonded_pairs:
-				img_old = img
-				for k in range(0,7):
-					if k == 0:
-						jimage = [0,0,0]
-					elif k == 1:
-						jimage = [1,0,0]
-					elif k == 2:
-						jimage = [0,1,0]
-					elif k == 3:
-						jimage = [0,0,1]
-					elif k == 4:
-						jimage = [1,1,0]
-					elif k == 5:
-						jimage = [0,1,1]
-					elif k == 6:
-						jimage = [1,1,1]
-
-					if jimage == img_old:
-						continue
-					d_pbc = pm_structure.get_distance(bonded_pair[0],bonded_pair[1],jimage=jimage)
-					if np.abs(d_pbc-scale) < tol:
-						img = jimage
-						break
-
-			#Save indices for bonded atoms
-			bonded_pairs_for_vertex.append(bonded_pair) #bonded pair for vertex j
-			bonded_pairs.append(bonded_pair) #all bonded pairs
-			bonded_edge_centers.append(edge_overlap_idx) #all edge centers
-
-			#Save image and distance info
-			img_list.append(img)
-			d_list.append(d_bond)
+		for vertex_overlap_idx in vertex_overlap_indices:
+			bonded_pairs.append([vertex_idx,vertex_overlap_idx])
 
 		if bad:
 			break
 
-		#Make sure coordination number is right
-		if len(bonded_pairs_for_vertex) != cn:
-			warnings.warn('Error: '+topology+'. CN not correct for atom'+str(vertex_idx),Warning)
+		#Check coordination number
+		if len(vertex_overlap_indices) != cn:
+			warnings.warn('Error: '+topology+'. Could not match coordination number',Warning)
 			pm_structure.to(filename=os.path.join('templates_errors',topology+'.cif'))
 			bad = True
 			break
-
+		
 	if bad:
 		continue
 
@@ -385,7 +311,6 @@ for i in range(0,len(topologies_all)):
 		atom1 = pm_structure[bonded_pair[0]] #Vertex1
 		atom2 = pm_structure[bonded_pair[1]] #Vertex2
 		output_indices = [atom1.index+1,atom2.index+1] #indices to write in CIF
-		edge_center = pm_structure[bonded_edge_centers[j]] #Edge center
 		img = img_list[j]
 		d = d_list[j]
 

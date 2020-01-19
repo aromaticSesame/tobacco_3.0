@@ -35,6 +35,9 @@ cn_all = [] #all vertex coordination numbers, coded as dictionaries
 if not os.path.exists(cgd_filename):
 	raise ValueError('Missing RCSR .cgd data file', cgd_filename)
 
+#Forbidden names on Windows
+forbidden_names = ['con','prn','aux','nul']
+
 #Read info from .cgd file
 with open(cgd_filename,'r') as r:
 	for line in r:
@@ -53,8 +56,8 @@ with open(cgd_filename,'r') as r:
 		#Get the topology name
 		elif 'name' in line.lower():
 			topology_val = line.lower().split('name')[-1].replace('*','_star').strip()
-			if topology_val == 'nul':
-				topology_val = 'nul-'
+			if topology_val in forbidden_names:
+				topology_val += '-'
 
 		#Get the spacegroup
 		elif 'group' in line.lower():

@@ -53,6 +53,8 @@ with open(cgd_filename,'r') as r:
 		#Get the topology name
 		elif 'name' in line.lower():
 			topology_val = line.lower().split('name')[-1].replace('*','_star').strip()
+			if topology_val == 'nul':
+				topology_val = 'nul-'
 
 		#Get the spacegroup
 		elif 'group' in line.lower():

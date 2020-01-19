@@ -303,7 +303,7 @@ for i in range(0,len(topologies_all)):
 
 		#Check coordination number
 		if len(vertex_overlap_indices) != cn:
-			warnings.warn('Error: '+topology+'. Could not find all bonded vertices',Warning)
+			warnings.warn('Error: '+topology+'. Incorrect number of bonded vertices',Warning)
 			pm_structure.to(filename=os.path.join('templates_errors',topology+'.cif'))
 			bad = True
 			break

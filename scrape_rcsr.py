@@ -2,6 +2,8 @@ from selenium.webdriver import Chrome
 import time
 import pandas as pd
 
+#SETTINGS
+n_topologies = 3001
 webdriver = r"C:\Users\asros\Desktop\chromedriver_win32\chromedriver.exe" #change me!
 #^Download from: https://chromedriver.chromium.org/
 
@@ -14,7 +16,7 @@ url = "http://rcsr.anu.edu.au/nets#details"
 driver.get(url)
 time.sleep(10)
 driver.find_elements_by_xpath('//*[@id="react-main"]/div/div[2]/ul/li[2]/div/ul/li[1]/a')[0].click()
-for i in range(1,3002):
+for i in range(1,n_topologies+1):
 	topologies.append(driver.find_elements_by_xpath('//*[@id="react-main"]/div/div[2]/ul/li[2]/div/div/ul/li['+str(i)+']/a')[0].text)
 
 print('Scraping topology data...')

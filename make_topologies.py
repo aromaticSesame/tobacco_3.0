@@ -55,9 +55,9 @@ with open(cgd_filename,'r') as r:
 
 		#Get the topology name
 		elif 'name' in line.lower():
-			topology_val = line.lower().split('name')[-1].replace('*','_star').strip()
+			topology_val = line.lower().split('name')[-1].replace('*','_star').replace('-','')strip()
 			if topology_val in forbidden_names:
-				topology_val += '-'
+				topology_val += '0'
 
 		#Get the spacegroup
 		elif 'group' in line.lower():

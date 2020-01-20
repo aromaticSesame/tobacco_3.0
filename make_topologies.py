@@ -328,6 +328,10 @@ for i in range(0,len(topologies_all)):
 		output_indices = [atom1.index+1,atom2.index+1] #indices to write in CIF
 		img = img_list[j]
 		d = d_list[j]
+		reverse = False
+		if output_indices[0] > output_indices[1]:
+			reverse = True
+			img = [-1*k for k in img]
 
 		#Make symmetry text
 		if img == [0,0,0]:
@@ -338,7 +342,10 @@ for i in range(0,len(topologies_all)):
 		#Complete bond text string
 		if symmetry_sym == '.' and (output_indices in done_dot_indices or [output_indices[1],output_indices[0]] in done_dot_indices):
 			continue
-		bond_text += atom1.species_string+str(output_indices[0])+'     '+atom2.species_string+str(output_indices[1])+'    '+str(np.round(d,3))+'   '+symmetry_sym+'     S\n'
+		if reverse:
+			bond_text += atom2.species_string+str(output_indices[1])+'     '+atom1.species_string+str(output_indices[0])+'    '+str(np.round(d,3))+'   '+symmetry_sym+'     S\n'
+		else:
+			bond_text += atom1.species_string+str(output_indices[0])+'     '+atom2.species_string+str(output_indices[1])+'    '+str(np.round(d,3))+'   '+symmetry_sym+'     S\n'
 		if symmetry_sym == '.':
 			done_dot_indices.append(output_indices)
 			

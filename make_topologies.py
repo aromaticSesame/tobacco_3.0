@@ -28,7 +28,6 @@ cellpars_all = [] #all [a,b,c,alpha,beta,gamma]
 vertices_all = [] #all [x,y,z] fractional positions of vertices
 edges_center_all = [] #all [x,y,z] fractional positions of edge centers
 edges_head_all = [] #all [x,y,z] fractional positions of edge heads
-edges_tail_all = [] #all [x,y,z] fractional positions of edge tails
 cn_all = [] #all vertex coordination numbers, coded as dictionaries
 
 #Make sure .cgd file is present
@@ -49,7 +48,6 @@ with open(cgd_filename,'r') as r:
 			vertices = []
 			edges_center = []
 			edges_head = []
-			edges_tail = []
 			cn = {}
 			vertices_count = 0
 
@@ -113,7 +111,6 @@ with open(cgd_filename,'r') as r:
 			edge_val = line.lower().split('edge')[-1].strip()
 			edge_val = [float(i) for i in edge_val.split()]
 			edges_head.append(edge_val[0:3])
-			edges_tail.append(edge_val[3:])
 
 		#Store results for topology
 		elif line.lower() == 'end':
@@ -126,9 +123,6 @@ with open(cgd_filename,'r') as r:
 			if len(cn) != len(vertices):
 				warnings.warn('Error: skipping '+topology_val+' because it is not formatted properly in .cgd file',Warning)
 				continue
-			elif len(edges_head) != len(edges_tail):
-				warnings.warn('Error: skipping '+topology_val+' because it is not formatted properly in .cgd file',Warning)
-				continue
 			elif len(edges_head) != len(edges_center):
 				warnings.warn('Error: skipping '+topology_val+' because it is not formatted properly in .cgd file',Warning)
 				continue				
@@ -139,7 +133,6 @@ with open(cgd_filename,'r') as r:
 			vertices_all.append(vertices)
 			edges_center_all.append(edges_center)
 			edges_head_all.append(edges_head)
-			edges_tail_all.append(edges_tail)
 			cn_all.append(cn)
 
 		#Ignore NC nets (assumed to be at bottom of .cgd file)
@@ -165,7 +158,6 @@ for i in range(0,len(topologies_all)):
 	vertices = vertices_all[i]
 	edges_center = edges_center_all[i]
 	edges_head = edges_head_all[i]
-	edges_tail = edges_tail_all[i]
 	cn_vec = cn_all[i]
 
 	#Make list of vertex and edge center symbols

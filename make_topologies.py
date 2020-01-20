@@ -55,7 +55,7 @@ with open(cgd_filename,'r') as r:
 
 		#Get the topology name
 		elif 'name' in line.lower():
-			topology_val = line.lower().split('name')[-1].replace('*','_star').replace('-','')strip()
+			topology_val = line.lower().split('name')[-1].replace('*','_star').replace('-','').strip()
 			if topology_val in forbidden_names:
 				topology_val += '0'
 

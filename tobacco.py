@@ -82,6 +82,7 @@ for template in sorted(os.listdir('templates')):
 	print 'template :',template                                          
 	print '========================================================================================================='
 	print ''
+    sys.stdout.flush()
 	
 	TG, unit_cell, TVT, TET, TNAME, a, b, c, ang_alpha, ang_beta, ang_gamma, max_le = ct2g(template)
 	node_cns = [(cncalc(node, 'nodes', ONE_ATOM_NODE_CN), node) for node in os.listdir('nodes')]
@@ -288,6 +289,7 @@ for template in sorted(os.listdir('templates')):
 			print '*******************************************'
 			print 'Bond formation : ' 
 			print '*******************************************'
+            sys.stdout.flush()
 			
 			fixed_bonds, nbcount, bond_check = bond_connected_components(placed_all, bonds_all, sc_unit_cell, max_length, BOND_TOL, TRACE_BOND_MAKING, NODE_TO_NODE, EXPANSIVE_BOND_SEARCH, ONE_ATOM_NODE_CN)
 
@@ -342,6 +344,7 @@ for template in sorted(os.listdir('templates')):
 			if WRITE_CIF:
 				print 'writing cif...'
 				print ''
+                sys.stdout.flush()
 				write_cif(fc_placed_all, fixed_bonds, scaled_params, sc_unit_cell, cifname, CHARGES)
 
 if OUTPUT_SCALING_DATA:

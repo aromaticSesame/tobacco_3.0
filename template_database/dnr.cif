@@ -1,5 +1,5 @@
 data_dnr
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -47,14 +47,14 @@ _geom_bond_site_symmetry_2
 _ccdc_geom_bond_type
 Er1     Ti5    10.0   .     S
 Er1     Ti5    10.0   1_556     S
-Er1     Ti11    10.0   .     S
 Er1     Ti11    10.0   1_556     S
+Er1     Ti11    10.0   .     S
 Ti2     V6    10.0   1_565     S
 Ti2     Er16    10.0   1_554     S
 Ti2     Er16    10.0   .     S
 Ti3     V6    10.0   1_565     S
-Ti3     Er8    10.0   1_554     S
 Ti3     Er8    10.0   .     S
+Ti3     Er8    10.0   1_554     S
 Ti4     V6    10.0   .     S
 Ti4     Er14    10.0   1_554     S
 Ti4     Er14    10.0   .     S
@@ -64,11 +64,11 @@ V6     Ti3    10.0   1_545     S
 V6     Ti2    10.0   1_545     S
 Er7     Ti9    10.0   .     S
 Er7     Ti9    10.0   1_556     S
-Er7     Ti17    10.0   .     S
 Er7     Ti17    10.0   1_556     S
+Er7     Ti17    10.0   .     S
 Er8     Ti3    10.0   1_556     S
-Er8     Ti10    10.0   .     S
 Er8     Ti10    10.0   1_556     S
+Er8     Ti10    10.0   .     S
 Ti9     Er7    10.0   1_554     S
 Ti9     V13    10.0   .     S
 Ti10     Er8    10.0   1_554     S
@@ -76,15 +76,15 @@ Ti10     V13    10.0   .     S
 Ti11     Er1    10.0   1_554     S
 Ti11     V13    10.0   1_655     S
 Ti12     V13    10.0   1_655     S
-Ti12     Er15    10.0   1_554     S
 Ti12     Er15    10.0   .     S
+Ti12     Er15    10.0   1_554     S
 V13     Ti12    10.0   1_455     S
 V13     Ti11    10.0   1_455     S
 Er14     Ti4    10.0   1_556     S
 Er14     Ti19    10.0   .     S
 Er14     Ti19    10.0   1_556     S
-Er15     Ti20    10.0   .     S
 Er15     Ti20    10.0   1_556     S
+Er15     Ti20    10.0   .     S
 Er15     Ti12    10.0   1_556     S
 Er16     Ti2    10.0   1_556     S
 Er16     Ti18    10.0   .     S

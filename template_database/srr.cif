@@ -1,5 +1,5 @@
 data_srr
-_audit_creation_date              2020-01-20
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -76,8 +76,8 @@ V3     V24    9.864   .     S
 V3     V19    9.864   1_565     S
 V3     V18    9.864   1_565     S
 V3     V17    9.864   1_565     S
-V3     V16    10.545   .     S
 V3     V16    10.545   1_556     S
+V3     V16    10.545   .     S
 V4     V24    9.864   1_556     S
 V4     V21    9.864   1_556     S
 V4     V19    9.864   1_556     S
@@ -86,8 +86,8 @@ V4     V17    9.864   .     S
 V4     V23    9.864   .     S
 V4     V18    9.864   .     S
 V4     V22    9.864   .     S
-V4     V15    10.545   .     S
 V4     V15    10.545   1_556     S
+V4     V15    10.545   .     S
 V5     V13    9.864   1_544     S
 V5     V20    9.864   1_445     S
 V5     V21    9.864   1_545     S
@@ -156,8 +156,8 @@ V11     V17    9.864   1_565     S
 V11     V14    9.864   1_655     S
 V11     V22    9.864   1_655     S
 V11     V13    9.864   1_655     S
-V11     V18    10.545   .     S
 V11     V18    10.545   1_565     S
+V11     V18    10.545   .     S
 V12     V16    9.864   1_556     S
 V12     V20    9.864   1_556     S
 V12     V21    9.864   1_556     S

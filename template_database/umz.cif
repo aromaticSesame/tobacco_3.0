@@ -1,5 +1,5 @@
 data_umz
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -47,15 +47,15 @@ V1     V13    10.0   1_556     S
 V2     V1    10.0   1_554     S
 V2     V3    10.0   1_545     S
 V2     V7    10.0   .     S
-V3     V4    10.0   1_554     S
 V3     V4    10.0   .     S
+V3     V4    10.0   1_554     S
 V3     V2    10.0   1_565     S
 V3     V16    10.0   1_554     S
 V4     V3    10.0   1_556     S
 V4     V1    10.0   1_565     S
 V4     V6    10.0   .     S
-V5     V6    10.0   .     S
 V5     V6    10.0   1_556     S
+V5     V6    10.0   .     S
 V5     V7    10.0   1_465     S
 V5     V10    10.0   1_556     S
 V6     V5    10.0   1_554     S
@@ -81,8 +81,8 @@ V12     V8    10.0   1_556     S
 V12     V11    10.0   1_556     S
 V12     V9    10.0   1_655     S
 V13     V1    10.0   1_554     S
-V13     V14    10.0   1_554     S
 V13     V14    10.0   .     S
+V13     V14    10.0   1_554     S
 V13     V15    10.0   .     S
 V14     V13    10.0   1_556     S
 V14     V16    10.0   .     S

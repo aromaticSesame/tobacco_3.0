@@ -1,5 +1,5 @@
 data_frz
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -56,8 +56,8 @@ Ti3     Er10    10.0   .     S
 V4     V1    10.0   1_655     S
 V4     V8    10.0   .     S
 V5     Ti6    10.0   .     S
-V5     V8    10.0   1_455     S
 V5     V8    10.0   .     S
+V5     V8    10.0   1_455     S
 Ti6     Ti2    10.0   1_556     S
 Ti6     Er20    10.0   1_556     S
 Ti7     V8    10.0   .     S
@@ -79,8 +79,8 @@ V13     V17    10.0   .     S
 Ti14     Ti18    10.0   1_554     S
 Ti14     Er19    10.0   .     S
 V15     Ti16    10.0   .     S
-V15     V17    10.0   .     S
 V15     V17    10.0   1_655     S
+V15     V17    10.0   .     S
 Ti16     Er9    10.0   1_556     S
 Ti16     Ti11    10.0   1_556     S
 V17     Ti18    10.0   .     S

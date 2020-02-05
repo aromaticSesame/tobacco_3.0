@@ -1,5 +1,5 @@
 data_asd
-_audit_creation_date              2020-01-20
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -39,14 +39,14 @@ Er2     V1    10.004   1_565     S
 Er2     Ti3    9.996   1_664     S
 Er2     Ti3    9.996   1_665     S
 Er2     V7    10.004   1_655     S
-Ti3     Er5    9.996   1_545     S
-Ti3     Er2    9.996   1_445     S
-Ti3     Er6    9.996   .     S
-Ti3     Er4    9.996   1_455     S
+Ti3     Er5    9.996   1_546     S
+Ti3     Er2    9.996   1_446     S
 Ti3     Er6    9.996   1_556     S
 Ti3     Er4    9.996   1_456     S
-Ti3     Er2    9.996   1_446     S
-Ti3     Er5    9.996   1_546     S
+Ti3     Er6    9.996   .     S
+Ti3     Er4    9.996   1_455     S
+Ti3     Er2    9.996   1_445     S
+Ti3     Er5    9.996   1_545     S
 Er4     Ti3    9.996   1_654     S
 Er4     Ti3    9.996   1_655     S
 Er4     V7    10.004   1_655     S

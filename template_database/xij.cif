@@ -1,5 +1,5 @@
 data_xij
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -48,10 +48,10 @@ V1     Ti10    9.762   .     S
 V1     Ti13    9.762   .     S
 V1     Ti8    9.762   .     S
 V1     Ti14    9.762   .     S
-Er2     Er5    11.272   .     S
 Er2     Er5    11.272   1_556     S
-Er2     Er12    11.272   .     S
+Er2     Er5    11.272   .     S
 Er2     Er12    11.272   1_565     S
+Er2     Er12    11.272   .     S
 Er2     Ti13    9.762   1_455     S
 Er2     Ti11    9.762   1_455     S
 Er2     Ti15    9.762   .     S
@@ -60,10 +60,10 @@ Er2     Ti8    9.762   1_455     S
 Er2     Ti16    9.762   .     S
 Er2     Ti10    9.762   1_455     S
 Er2     Ti9    9.762   .     S
-Er3     Er6    11.272   .     S
 Er3     Er6    11.272   1_556     S
-Er3     Er12    11.272   .     S
+Er3     Er6    11.272   .     S
 Er3     Er12    11.272   1_655     S
+Er3     Er12    11.272   .     S
 Er3     Ti9    9.762   1_545     S
 Er3     Ti10    9.762   .     S
 Er3     Ti8    9.762   1_545     S
@@ -72,10 +72,10 @@ Er3     Ti11    9.762   1_545     S
 Er3     Ti13    9.762   .     S
 Er3     Ti14    9.762   1_545     S
 Er3     Ti15    9.762   .     S
-Er4     Er5    11.272   .     S
 Er4     Er5    11.272   1_655     S
-Er4     Er6    11.272   .     S
+Er4     Er5    11.272   .     S
 Er4     Er6    11.272   1_565     S
+Er4     Er6    11.272   .     S
 Er4     Ti9    9.762   1_554     S
 Er4     Ti11    9.762   1_554     S
 Er4     Ti15    9.762   1_554     S

@@ -1,5 +1,5 @@
 data_mst
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -80,11 +80,11 @@ Er10     Er8    10.0   1_545     S
 Er10     Er4    10.0   1_554     S
 Er10     V19    10.0   .     S
 Er11     Er12    10.0   .     S
-Er11     Er14    10.0   1_545     S
 Er11     Er14    10.0   .     S
+Er11     Er14    10.0   1_545     S
 Er11     Er18    10.0   .     S
-Er12     Er13    10.0   1_545     S
 Er12     Er13    10.0   .     S
+Er12     Er13    10.0   1_545     S
 Er12     Er17    10.0   1_556     S
 Er12     V19    10.0   1_656     S
 Er13     V20    10.0   1_655     S
@@ -95,12 +95,12 @@ Er14     V1    10.0   1_556     S
 Er14     Er11    10.0   1_565     S
 Er14     Er15    10.0   1_556     S
 Er15     Er16    10.0   .     S
-Er15     Er18    10.0   .     S
 Er15     Er18    10.0   1_565     S
+Er15     Er18    10.0   .     S
 Er15     Er14    10.0   1_554     S
 Er16     V20    10.0   1_655     S
-Er16     Er17    10.0   .     S
 Er16     Er17    10.0   1_565     S
+Er16     Er17    10.0   .     S
 Er17     Er18    10.0   .     S
 Er17     Er16    10.0   1_545     S
 Er17     Er12    10.0   1_554     S

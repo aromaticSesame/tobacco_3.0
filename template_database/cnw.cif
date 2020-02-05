@@ -1,5 +1,5 @@
 data_cnw
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -55,8 +55,8 @@ Ce4     Ce5    10.0   1_644     S
 Ce4     Ce5    10.0   1_654     S
 Ce4     V3    10.0   1_655     S
 Ce5     Ti2    10.0   1_556     S
-Ce5     Ce4    10.0   1_456     S
 Ce5     Ce4    10.0   1_466     S
+Ce5     Ce4    10.0   1_456     S
 Ce5     V8    10.0   1_455     S
 Er6     Ti15    10.0   .     S
 Er6     V8    10.0   .     S
@@ -66,26 +66,26 @@ Ti7     Ce4    10.0   1_556     S
 Ti7     Er6    10.0   1_545     S
 Ti7     Er14    10.0   1_556     S
 V8     Ce5    10.0   1_655     S
-V8     V3    10.0   1_655     S
 V8     V3    10.0   1_665     S
+V8     V3    10.0   1_655     S
 Er9     Ti2    10.0   1_556     S
 Er9     V11    10.0   .     S
-Er9     Ti10    10.0   .     S
 Er9     Ti10    10.0   1_565     S
+Er9     Ti10    10.0   .     S
 Ti10     Er9    10.0   1_545     S
 Ti10     Ce13    10.0   .     S
 V11     Ce12    10.0   .     S
-V11     V16    10.0   1_556     S
 V11     V16    10.0   1_566     S
+V11     V16    10.0   1_556     S
 Ce12     Ti15    10.0   .     S
-Ce12     Ce13    10.0   .     S
 Ce12     Ce13    10.0   1_565     S
+Ce12     Ce13    10.0   .     S
 Ce13     Ce12    10.0   1_545     S
 Ce13     V16    10.0   .     S
 Er14     Ti7    10.0   1_554     S
 Er14     V16    10.0   .     S
-Er14     Ti15    10.0   1_545     S
 Er14     Ti15    10.0   .     S
+Er14     Ti15    10.0   1_545     S
 Ti15     Er14    10.0   1_565     S
 V16     V11    10.0   1_544     S
 V16     V11    10.0   1_554     S

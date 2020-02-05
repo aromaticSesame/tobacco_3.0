@@ -1,5 +1,5 @@
 data_zcc
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -66,8 +66,8 @@ V2     V1    10.0   1_556     S
 V2     V3    10.0   1_556     S
 V2     Er26    10.0   .     S
 V3     V2    10.0   1_554     S
-V3     V4    10.0   1_554     S
 V3     V4    10.0   .     S
+V3     V4    10.0   1_554     S
 V3     Er15    10.0   .     S
 V4     V3    10.0   1_556     S
 V4     Er16    10.0   .     S
@@ -81,8 +81,8 @@ V6     V5    10.0   1_556     S
 V6     V7    10.0   1_556     S
 V6     Er24    10.0   .     S
 V7     V6    10.0   1_554     S
-V7     V8    10.0   1_554     S
 V7     V8    10.0   .     S
+V7     V8    10.0   1_554     S
 V7     Er19    10.0   .     S
 V8     V7    10.0   1_556     S
 V8     Er20    10.0   .     S
@@ -96,8 +96,8 @@ V10     V9    10.0   1_556     S
 V10     V11    10.0   1_556     S
 V10     Er22    10.0   .     S
 V11     V10    10.0   1_554     S
-V11     V12    10.0   1_554     S
 V11     V12    10.0   .     S
+V11     V12    10.0   1_554     S
 V11     Er17    10.0   .     S
 V12     V11    10.0   1_556     S
 V12     Er18    10.0   .     S
@@ -137,6 +137,6 @@ V30     V32    10.0   .     S
 V30     V29    10.0   1_556     S
 V30     V31    10.0   1_556     S
 V31     V30    10.0   1_554     S
-V31     V32    10.0   1_554     S
 V31     V32    10.0   .     S
+V31     V32    10.0   1_554     S
 V32     V31    10.0   1_556     S

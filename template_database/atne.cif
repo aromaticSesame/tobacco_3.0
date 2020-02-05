@@ -1,5 +1,5 @@
 data_atne
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -70,15 +70,15 @@ Er2     Ti8    10.0   .     S
 Er2     Ti29    10.0   1_545     S
 Ti3     V4    10.0   .     S
 Ti3     V6    10.0   1_556     S
-Ti3     Ti8    10.0   .     S
 Ti3     Ti8    10.0   1_556     S
+Ti3     Ti8    10.0   .     S
 Ti3     Er10    10.0   1_556     S
 V4     Ti7    10.0   .     S
 V4     Ti8    10.0   .     S
 V4     Ti5    10.0   .     S
 Ti5     V6    10.0   1_556     S
-Ti5     Ti7    10.0   .     S
 Ti5     Ti7    10.0   1_556     S
+Ti5     Ti7    10.0   .     S
 Ti5     Er26    10.0   1_556     S
 V6     Ti7    10.0   .     S
 V6     Ti3    10.0   1_554     S
@@ -111,9 +111,9 @@ Ti12     V14    10.0   .     S
 Ti12     Ti13    10.0   .     S
 Ti12     Er24    10.0   .     S
 Ti13     Er1    10.0   1_655     S
+Ti13     Ti12    10.0   1_556     S
 Ti13     V11    10.0   1_556     S
 Ti13     V14    10.0   .     S
-Ti13     Ti12    10.0   1_556     S
 Ti13     Er24    10.0   1_556     S
 V14     Er1    10.0   1_655     S
 V14     Ti15    10.0   .     S
@@ -177,9 +177,9 @@ Ti28     V30    10.0   .     S
 Ti28     Ti29    10.0   .     S
 Ti29     Er2    10.0   1_565     S
 Ti29     Er17    10.0   1_556     S
+Ti29     Ti28    10.0   1_556     S
 Ti29     V27    10.0   1_556     S
 Ti29     V30    10.0   .     S
-Ti29     Ti28    10.0   1_556     S
 V30     Er2    10.0   1_565     S
 V30     Ti32    10.0   .     S
 V30     Ti31    10.0   .     S

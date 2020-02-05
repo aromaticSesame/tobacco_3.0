@@ -1,5 +1,5 @@
 data_urx
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -44,13 +44,13 @@ Er1     Ti5    10.0   .     S
 Er1     Ti6    10.0   1_455     S
 Er1     Ti14    10.0   1_455     S
 Er1     Ti13    10.0   .     S
-Er1     Ti15    10.0   1_455     S
+Er1     Ti15    10.0   .     S
 Er1     Ti14    10.0   1_565     S
 Er1     Ti6    10.0   1_565     S
-Er1     Ti4    10.0   1_455     S
-Er1     Ti13    10.0   1_565     S
-Er1     Ti15    10.0   .     S
 Er1     Ti4    10.0   .     S
+Er1     Ti13    10.0   1_565     S
+Er1     Ti15    10.0   1_455     S
+Er1     Ti4    10.0   1_455     S
 Er1     Ti5    10.0   1_565     S
 V2     Ti6    10.0   1_455     S
 V2     Ti4    10.0   1_445     S
@@ -64,14 +64,14 @@ Ti3     Er16    10.0   1_565     S
 Ti4     Er1    10.0   1_655     S
 Ti4     V2    10.0   1_665     S
 Ti5     Er1    10.0   1_545     S
-Ti6     Er1    10.0   1_545     S
 Ti6     Er1    10.0   1_655     S
+Ti6     Er1    10.0   1_545     S
 Ti6     V2    10.0   1_655     S
 Ti7     Er16    10.0   1_455     S
 Ti7     Er16    10.0   .     S
 Ti8     V2    10.0   1_665     S
-Ti8     Er16    10.0   .     S
 Ti8     Er16    10.0   1_565     S
+Ti8     Er16    10.0   .     S
 V9     Ti14    10.0   1_455     S
 V9     Ti15    10.0   1_445     S
 V9     Ti13    10.0   .     S
@@ -85,19 +85,19 @@ Ti11     V9    10.0   1_556     S
 Ti11     Er16    10.0   1_455     S
 Ti11     Er16    10.0   .     S
 Ti12     V9    10.0   1_666     S
-Ti12     Er16    10.0   .     S
 Ti12     Er16    10.0   1_565     S
+Ti12     Er16    10.0   .     S
 Ti13     Er1    10.0   1_545     S
-Ti14     Er1    10.0   1_545     S
 Ti14     Er1    10.0   1_655     S
+Ti14     Er1    10.0   1_545     S
 Ti14     V9    10.0   1_655     S
 Ti15     Er1    10.0   1_655     S
 Ti15     V9    10.0   1_665     S
+Er16     Ti11    10.0   1_655     S
 Er16     Ti12    10.0   1_545     S
 Er16     Ti8    10.0   1_545     S
-Er16     Ti10    10.0   1_545     S
-Er16     Ti3    10.0   1_545     S
 Er16     Ti7    10.0   1_655     S
-Er16     Ti3    10.0   1_655     S
 Er16     Ti10    10.0   1_655     S
-Er16     Ti11    10.0   1_655     S
+Er16     Ti3    10.0   1_655     S
+Er16     Ti3    10.0   1_545     S
+Er16     Ti10    10.0   1_545     S

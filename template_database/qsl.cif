@@ -1,5 +1,5 @@
 data_qsl
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -54,15 +54,15 @@ Ce1     Ti5    10.0   .     S
 Ce1     Er2    10.0   .     S
 Ce1     Er14    10.0   1_565     S
 Er2     Ti5    10.0   1_556     S
-Er2     Ti6    10.0   .     S
 Er2     Ce1    10.0   1_556     S
+Er2     Ti6    10.0   .     S
 Er2     V3    10.0   .     S
 Er2     V4    10.0   .     S
 Er2     Ce13    10.0   1_565     S
 V3     Ti12    10.0   .     S
-V3     Ti5    10.0   .     S
-V3     Ti6    10.0   .     S
 V3     Ti5    10.0   1_556     S
+V3     Ti6    10.0   .     S
+V3     Ti5    10.0   .     S
 V4     Ti11    10.0   .     S
 V4     Ti6    10.0   .     S
 V4     Ti5    10.0   1_556     S
@@ -80,31 +80,31 @@ Ce7     Er8    10.0   .     S
 Ce7     Er8    10.0   1_556     S
 Ce7     Er20    10.0   .     S
 Er8     Ti12    10.0   1_455     S
-Er8     Ce7    10.0   1_554     S
 Er8     Ti11    10.0   1_554     S
+Er8     Ce7    10.0   1_554     S
 Er8     V9    10.0   .     S
 Er8     V10    10.0   1_455     S
 Er8     Ce19    10.0   .     S
 V9     Ti11    10.0   1_554     S
 V9     Ti12    10.0   1_455     S
 V9     Ti11    10.0   .     S
-V10     Ti12    10.0   1_554     S
+V10     Ti12    10.0   .     S
 V10     Ti11    10.0   1_654     S
 V10     Er8    10.0   1_655     S
-V10     Ti12    10.0   .     S
+V10     Ti12    10.0   1_554     S
 Ti11     Er8    10.0   1_556     S
+Ti11     V9    10.0   1_556     S
 Ti11     V10    10.0   1_456     S
 Ti11     Ti12    10.0   1_455     S
-Ti11     V9    10.0   1_556     S
 Ti12     Ce7    10.0   1_655     S
 Ti12     Er8    10.0   1_655     S
 Ti12     V9    10.0   1_655     S
 Ti12     Ti11    10.0   1_655     S
 Ti12     V10    10.0   1_556     S
-Ce13     Er14    10.0   .     S
+Ce13     Er14    10.0   1_556     S
 Ce13     Ti17    10.0   .     S
 Ce13     Ti18    10.0   .     S
-Ce13     Er14    10.0   1_556     S
+Ce13     Er14    10.0   .     S
 Ce13     Er2    10.0   1_545     S
 Er14     Ti18    10.0   1_554     S
 Er14     Ce13    10.0   1_554     S
@@ -117,29 +117,29 @@ V15     Ti18    10.0   1_554     S
 V15     Ti17    10.0   .     S
 V15     Ti18    10.0   .     S
 V16     Ti23    10.0   .     S
-V16     Ti17    10.0   1_554     S
-V16     Ti18    10.0   1_554     S
 V16     Ti17    10.0   .     S
+V16     Ti18    10.0   1_554     S
+V16     Ti17    10.0   1_554     S
 Ti17     Ti18    10.0   .     S
 Ti17     V16    10.0   1_556     S
 Ti17     V21    10.0   .     S
 Ti18     Er14    10.0   1_556     S
-Ti18     V16    10.0   1_556     S
 Ti18     V15    10.0   1_556     S
+Ti18     V16    10.0   1_556     S
 Ti18     V22    10.0   .     S
 Ce19     Er20    10.0   1_554     S
 Ce19     Ti24    10.0   .     S
 Ce19     Ti23    10.0   1_455     S
 Ce19     Er20    10.0   .     S
 Er20     Ti23    10.0   1_456     S
-Er20     Ti24    10.0   .     S
 Er20     Ce19    10.0   1_556     S
+Er20     Ti24    10.0   .     S
 Er20     V21    10.0   1_455     S
 Er20     V22    10.0   .     S
-V21     Ti23    10.0   .     S
+V21     Ti23    10.0   1_556     S
 V21     Ti24    10.0   1_655     S
 V21     Er20    10.0   1_655     S
-V21     Ti23    10.0   1_556     S
+V21     Ti23    10.0   .     S
 V22     Ti24    10.0   .     S
 V22     Ti23    10.0   1_456     S
 V22     Ti24    10.0   1_556     S
@@ -148,6 +148,6 @@ Ti23     Ce19    10.0   1_655     S
 Ti23     V21    10.0   1_554     S
 Ti23     V22    10.0   1_654     S
 Ti23     Ti24    10.0   1_655     S
-Ti24     V22    10.0   1_554     S
 Ti24     V21    10.0   1_455     S
 Ti24     Ti23    10.0   1_455     S
+Ti24     V22    10.0   1_554     S

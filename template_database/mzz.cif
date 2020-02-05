@@ -1,5 +1,5 @@
 data_mzz
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -45,17 +45,17 @@ _geom_bond_distance
 _geom_bond_site_symmetry_2
 _ccdc_geom_bond_type
 Ce1     V12    10.0   .     S
-Ce1     V2    10.0   1_554     S
 Ce1     V2    10.0   .     S
-Ce1     Ti5    10.0   1_554     S
+Ce1     V2    10.0   1_554     S
 Ce1     Ti5    10.0   .     S
+Ce1     Ti5    10.0   1_554     S
 V2     Ce1    10.0   1_556     S
 V2     Ce13    10.0   1_565     S
 Ce3     V19    10.0   1_565     S
-Ce3     V4    10.0   1_554     S
 Ce3     V4    10.0   .     S
-Ce3     Ti7    10.0   1_554     S
+Ce3     V4    10.0   1_554     S
 Ce3     Ti7    10.0   .     S
+Ce3     Ti7    10.0   1_554     S
 V4     Ce3    10.0   1_556     S
 V4     Ce11    10.0   1_455     S
 Ti5     Er6    10.0   .     S
@@ -64,10 +64,10 @@ Er6     Ti7    10.0   .     S
 Er6     Ti10    10.0   .     S
 Ti7     Ce3    10.0   1_556     S
 Ce8     V14    10.0   1_455     S
-Ce8     V9    10.0   1_554     S
 Ce8     V9    10.0   .     S
-Ce8     Ti10    10.0   1_554     S
+Ce8     V9    10.0   1_554     S
 Ce8     Ti10    10.0   .     S
+Ce8     Ti10    10.0   1_554     S
 V9     Ce8    10.0   1_556     S
 V9     Ce18    10.0   .     S
 Ti10     Ce8    10.0   1_556     S

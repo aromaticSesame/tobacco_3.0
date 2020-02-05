@@ -1,5 +1,5 @@
 data_ithd
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -54,8 +54,8 @@ Er4     V14    9.235   1_545     S
 Er4     V5    9.235   .     S
 V5     Er6    9.235   1_556     S
 V5     Er8    9.235   1_655     S
-Er6     Er7    13.06   1_545     S
 Er6     Er7    13.06   .     S
+Er6     Er7    13.06   1_545     S
 Er6     V5    9.235   1_554     S
 Er6     V3    9.235   1_554     S
 Er6     V12    9.235   .     S

@@ -1,5 +1,5 @@
 data_bbs
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -36,22 +36,22 @@ _geom_bond_atom_site_label_2
 _geom_bond_distance
 _geom_bond_site_symmetry_2
 _ccdc_geom_bond_type
-V1     V2    10.0   .     S
 V1     V2    10.0   1_556     S
+V1     V2    10.0   .     S
 V1     Er11    10.0   1_455     S
 V1     Er12    10.0   .     S
 V2     V1    10.0   1_554     S
 V2     Er9    10.0   .     S
 V2     Er7    10.0   1_455     S
-V3     V4    10.0   .     S
 V3     V4    10.0   1_556     S
+V3     V4    10.0   .     S
 V3     Er12    10.0   .     S
 V3     Er10    10.0   .     S
 V4     V3    10.0   1_554     S
 V4     Er7    10.0   .     S
 V4     Er8    10.0   .     S
-V5     V6    10.0   1_554     S
 V5     V6    10.0   .     S
+V5     V6    10.0   1_554     S
 V5     Er8    10.0   1_545     S
 V5     Er11    10.0   1_554     S
 V6     V5    10.0   1_556     S

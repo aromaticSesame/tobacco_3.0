@@ -1,5 +1,5 @@
 data_bpc
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -47,13 +47,13 @@ V2     V16    10.003   1_556     S
 V2     V16    10.003   1_656     S
 Er3     V4    9.994   .     S
 Er3     Er5    10.003   1_545     S
-V4     V14    10.003   .     S
 V4     V14    10.003   1_655     S
+V4     V14    10.003   .     S
 Er5     V6    9.994   .     S
 Er5     Er7    10.003   .     S
 Er5     Er3    10.003   1_565     S
-V6     V12    10.003   .     S
 V6     V12    10.003   1_655     S
+V6     V12    10.003   .     S
 Er7     V8    9.994   .     S
 Er7     Er1    10.003   1_564     S
 V8     V10    10.003   1_554     S
@@ -61,8 +61,8 @@ V8     V10    10.003   1_654     S
 Er9     V10    9.994   .     S
 Er9     Er11    10.003   .     S
 Er9     Er15    10.003   1_556     S
-V10     V8    10.003   1_456     S
 V10     V8    10.003   1_556     S
+V10     V8    10.003   1_456     S
 Er11     V12    9.994   .     S
 Er11     Er13    10.003   .     S
 V12     V6    10.003   1_455     S
@@ -71,5 +71,5 @@ Er13     Er15    10.003   .     S
 V14     V4    10.003   1_455     S
 Er15     V16    9.994   .     S
 Er15     Er9    10.003   1_554     S
-V16     V2    10.003   1_454     S
 V16     V2    10.003   1_554     S
+V16     V2    10.003   1_454     S

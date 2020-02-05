@@ -1,5 +1,5 @@
 data_hck
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -50,15 +50,15 @@ Er1     Er16    10.0   .     S
 Er2     Er4    10.0   1_455     S
 Er2     V6    10.0   .     S
 Er2     V7    10.0   .     S
-Er2     Er13    10.0   1_455     S
 Er2     Er13    10.0   .     S
+Er2     Er13    10.0   1_455     S
 Er2     Er15    10.0   .     S
 Er3     Er4    10.0   .     S
 Er3     Er1    10.0   1_655     S
 Er3     V10    10.0   .     S
-Er3     Er16    10.0   .     S
-Er3     V12    10.0   .     S
 Er3     Er16    10.0   1_655     S
+Er3     V12    10.0   .     S
+Er3     Er16    10.0   .     S
 Er3     Er14    10.0   .     S
 Er4     Er2    10.0   1_655     S
 Er4     V5    10.0   .     S
@@ -68,14 +68,14 @@ Er4     V8    10.0   .     S
 Er4     Er13    10.0   .     S
 V5     Er15    10.0   .     S
 V5     V6    10.0   1_554     S
-V5     V8    10.0   1_455     S
-V5     V7    10.0   1_554     S
 V5     V8    10.0   .     S
+V5     V7    10.0   1_554     S
+V5     V8    10.0   1_455     S
 V5     V12    10.0   .     S
 V6     V5    10.0   1_556     S
-V6     V7    10.0   1_455     S
-V6     Er13    10.0   1_455     S
 V6     V7    10.0   .     S
+V6     Er13    10.0   1_455     S
+V6     V7    10.0   1_455     S
 V6     V8    10.0   1_456     S
 V6     V11    10.0   1_565     S
 V7     V5    10.0   1_556     S
@@ -90,14 +90,14 @@ V8     V7    10.0   1_554     S
 V8     V10    10.0   1_565     S
 V9     Er14    10.0   .     S
 V9     V10    10.0   1_556     S
-V9     V11    10.0   .     S
 V9     V11    10.0   1_655     S
+V9     V11    10.0   .     S
 V9     V12    10.0   1_556     S
 V10     V9    10.0   1_554     S
 V10     Er16    10.0   1_655     S
-V10     V12    10.0   .     S
-V10     V11    10.0   1_654     S
 V10     V12    10.0   1_655     S
+V10     V11    10.0   1_654     S
+V10     V12    10.0   .     S
 V10     V8    10.0   1_545     S
 V11     Er14    10.0   1_455     S
 V11     V9    10.0   1_455     S
@@ -116,8 +116,8 @@ Er14     V11    10.0   1_655     S
 Er14     Er1    10.0   1_655     S
 Er14     Er13    10.0   1_545     S
 Er14     Er16    10.0   .     S
-Er15     Er4    10.0   1_455     S
 Er15     V8    10.0   1_455     S
+Er15     Er4    10.0   1_455     S
 Er15     Er16    10.0   1_565     S
 Er16     V10    10.0   1_455     S
 Er16     Er3    10.0   1_455     S

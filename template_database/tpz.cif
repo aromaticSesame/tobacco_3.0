@@ -1,5 +1,5 @@
 data_tpz
-_audit_creation_date              2020-01-20
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -39,19 +39,19 @@ _geom_bond_distance
 _geom_bond_site_symmetry_2
 _ccdc_geom_bond_type
 V1     V14    10.475   1_565     S
-V1     Er3    9.941   1_554     S
 V1     Er3    9.941   .     S
+V1     Er3    9.941   1_554     S
 V2     V9    10.475   .     S
-V2     Er5    9.941   1_554     S
 V2     Er5    9.941   .     S
+V2     Er5    9.941   1_554     S
 Er3     V1    9.941   1_556     S
-Er3     Ti4    9.94   .     S
 Er3     Ti4    9.94   1_556     S
+Er3     Ti4    9.94   .     S
 Ti4     Er3    9.94   1_554     S
-Ti4     Er6    9.94   1_554     S
-Ti4     Er5    9.94   1_554     S
-Ti4     Er5    9.94   .     S
 Ti4     Er6    9.94   .     S
+Ti4     Er5    9.94   .     S
+Ti4     Er5    9.94   1_554     S
+Ti4     Er6    9.94   1_554     S
 Er5     Ti4    9.94   1_556     S
 Er5     V2    9.941   1_556     S
 Er6     Ti4    9.94   1_556     S
@@ -67,13 +67,13 @@ V9     Er11    9.941   .     S
 Er10     V8    9.941   1_556     S
 Er10     Ti12    9.94   .     S
 Er10     Ti12    9.94   1_556     S
-Er11     Ti12    9.94   .     S
 Er11     Ti12    9.94   1_556     S
+Er11     Ti12    9.94   .     S
 Er11     V9    9.941   1_556     S
 Ti12     Er10    9.94   1_554     S
 Ti12     Er11    9.94   1_554     S
-Ti12     Er13    9.94   1_554     S
 Ti12     Er13    9.94   .     S
+Ti12     Er13    9.94   1_554     S
 Er13     Ti12    9.94   1_556     S
 Er13     V14    9.941   .     S
 Er13     V14    9.941   1_556     S

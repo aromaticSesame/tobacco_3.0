@@ -1,5 +1,5 @@
 data_lrl
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -87,8 +87,8 @@ Er8     V39    10.0   1_665     S
 Er8     Er16    10.0   1_665     S
 Ti9     Er7    10.0   1_545     S
 Ti9     Ti10    10.0   .     S
-Ti9     Ti11    10.0   1_545     S
 Ti9     Ti11    10.0   .     S
+Ti9     Ti11    10.0   1_545     S
 Ti10     Ti12    10.0   1_545     S
 Ti10     Ti12    10.0   .     S
 Ti11     Ti12    10.0   .     S
@@ -107,8 +107,8 @@ Ti17     Ti18    10.0   .     S
 Ti17     Ti19    10.0   1_545     S
 Ti17     Ti19    10.0   .     S
 Ti18     Er14    10.0   1_545     S
-Ti18     Ti20    10.0   1_545     S
 Ti18     Ti20    10.0   .     S
+Ti18     Ti20    10.0   1_545     S
 Ti19     Ti20    10.0   .     S
 Ti19     Ti17    10.0   1_565     S
 Ti20     Ti18    10.0   1_565     S
@@ -130,8 +130,8 @@ Ti27     Ti28    10.0   .     S
 Ti27     Ti29    10.0   1_545     S
 Ti27     Ti29    10.0   .     S
 Ti28     Er26    10.0   1_545     S
-Ti28     Ti30    10.0   1_545     S
 Ti28     Ti30    10.0   .     S
+Ti28     Ti30    10.0   1_545     S
 Ti29     Ti30    10.0   .     S
 Ti29     Ti27    10.0   1_565     S
 Ti30     Ti28    10.0   1_565     S
@@ -145,8 +145,8 @@ Er34     V3    10.0   1_655     S
 Er34     Er25    10.0   1_645     S
 Ti35     Er31    10.0   1_545     S
 Ti35     Ti36    10.0   .     S
-Ti35     Ti37    10.0   1_545     S
 Ti35     Ti37    10.0   .     S
+Ti35     Ti37    10.0   1_545     S
 Ti36     Ti38    10.0   1_545     S
 Ti36     Ti38    10.0   .     S
 Ti37     Ti38    10.0   .     S

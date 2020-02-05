@@ -1,5 +1,5 @@
 data_xam
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -122,14 +122,14 @@ V12     Er1    9.7   1_554     S
 V12     Er6    9.7   1_554     S
 V12     Er5    9.7   1_554     S
 V12     Er7    9.7   1_554     S
-V13     V9    11.2   1_565     S
 V13     V11    11.2   1_556     S
+V13     V9    11.2   1_565     S
 V13     Er1    9.7   1_455     S
 V13     Er3    9.7   1_455     S
 V13     Er6    9.7   1_455     S
 V13     Er4    9.7   1_455     S
-V14     V9    11.2   1_655     S
 V14     V10    11.2   1_556     S
+V14     V9    11.2   1_655     S
 V14     Er1    9.7   1_545     S
 V14     Er3    9.7   1_545     S
 V14     Er5    9.7   1_545     S

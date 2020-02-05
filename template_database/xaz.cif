@@ -1,5 +1,5 @@
 data_xaz
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -46,10 +46,10 @@ Er1     V10    9.51   1_565     S
 Er1     V14    9.51   1_565     S
 Er1     Er3    10.981   1_554     S
 Er1     Er5    10.981   1_455     S
-Er1     Er8    10.981   .     S
+Er1     Er8    10.981   1_565     S
 Er1     Er3    10.981   .     S
 Er1     Er5    10.981   .     S
-Er1     Er8    10.981   1_565     S
+Er1     Er8    10.981   .     S
 Er2     V12    9.51   .     S
 Er2     V10    9.51   .     S
 Er2     V14    9.51   .     S
@@ -57,33 +57,33 @@ Er2     V9    9.51   1_655     S
 Er2     V11    9.51   1_655     S
 Er2     V13    9.51   1_655     S
 Er2     Er6    10.981   1_554     S
-Er2     Er8    10.981   .     S
+Er2     Er8    10.981   1_655     S
 Er2     Er5    10.981   1_545     S
 Er2     Er6    10.981   .     S
 Er2     Er5    10.981   .     S
-Er2     Er8    10.981   1_655     S
+Er2     Er8    10.981   .     S
 Er3     V13    9.51   .     S
 Er3     V9    9.51   1_565     S
 Er3     V11    9.51   1_556     S
 Er3     V12    9.51   1_556     S
 Er3     V14    9.51   1_565     S
 Er3     V10    9.51   1_566     S
-Er3     Er4    10.981   1_455     S
-Er3     Er7    10.981   .     S
 Er3     Er1    10.981   1_556     S
-Er3     Er4    10.981   .     S
+Er3     Er4    10.981   1_455     S
 Er3     Er7    10.981   1_565     S
+Er3     Er4    10.981   .     S
+Er3     Er7    10.981   .     S
 Er4     V13    9.51   1_655     S
 Er4     V12    9.51   1_556     S
 Er4     V14    9.51   1_565     S
 Er4     V9    9.51   1_665     S
 Er4     V11    9.51   1_656     S
 Er4     V10    9.51   1_566     S
+Er4     Er3    10.981   1_655     S
+Er4     Er5    10.981   1_556     S
+Er4     Er6    10.981   1_565     S
 Er4     Er5    10.981   .     S
 Er4     Er6    10.981   .     S
-Er4     Er5    10.981   1_556     S
-Er4     Er3    10.981   1_655     S
-Er4     Er6    10.981   1_565     S
 Er5     V12    9.51   .     S
 Er5     V10    9.51   1_565     S
 Er5     V11    9.51   1_655     S
@@ -99,10 +99,10 @@ Er6     V10    9.51   1_556     S
 Er6     V12    9.51   1_556     S
 Er6     V13    9.51   1_655     S
 Er6     V11    9.51   1_656     S
-Er6     Er4    10.981   1_545     S
-Er6     Er7    10.981   .     S
 Er6     Er2    10.981   1_556     S
+Er6     Er4    10.981   1_545     S
 Er6     Er7    10.981   1_655     S
+Er6     Er7    10.981   .     S
 Er7     V13    9.51   .     S
 Er7     V14    9.51   .     S
 Er7     V12    9.51   1_556     S
@@ -111,8 +111,8 @@ Er7     V11    9.51   1_556     S
 Er7     V10    9.51   1_556     S
 Er7     Er3    10.981   1_545     S
 Er7     Er6    10.981   1_455     S
-Er7     Er8    10.981   .     S
 Er7     Er8    10.981   1_556     S
+Er7     Er8    10.981   .     S
 Er8     V10    9.51   .     S
 Er8     V11    9.51   .     S
 Er8     V12    9.51   .     S

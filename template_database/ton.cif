@@ -1,5 +1,5 @@
 data_ton
-_audit_creation_date              2020-01-20
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -42,8 +42,8 @@ V1     Er9    9.51   .     S
 V1     Er10    9.51   1_556     S
 V1     Er7    9.51   1_655     S
 V1     Er8    9.51   1_656     S
-V2     V3    10.981   1_545     S
 V2     V3    10.981   .     S
+V2     V3    10.981   1_545     S
 V2     V1    10.981   1_554     S
 V2     Er9    9.51   .     S
 V2     Er10    9.51   .     S
@@ -56,8 +56,8 @@ V3     Er9    9.51   .     S
 V3     Er10    9.51   1_565     S
 V3     Er8    9.51   1_655     S
 V3     Er7    9.51   1_665     S
-V4     V5    10.981   1_554     S
 V4     V5    10.981   .     S
+V4     V5    10.981   1_554     S
 V4     V3    10.981   1_455     S
 V4     Er9    9.51   .     S
 V4     Er8    9.51   .     S

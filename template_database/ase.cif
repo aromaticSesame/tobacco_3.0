@@ -1,5 +1,5 @@
 data_ase
-_audit_creation_date              2020-01-20
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -62,13 +62,13 @@ V8     Ti10    10.004   .     S
 V9     Ti10    10.004   1_664     S
 V9     Ti10    10.004   1_665     S
 V9     Er5    9.996   1_565     S
-Ti10     V6    10.004   1_545     S
-Ti10     V4    10.004   1_455     S
-Ti10     V9    10.004   1_445     S
-Ti10     V3    10.004   1_445     S
 Ti10     V6    10.004   1_546     S
 Ti10     V8    10.004   1_556     S
 Ti10     V2    10.004   1_556     S
 Ti10     V4    10.004   1_456     S
 Ti10     V9    10.004   1_446     S
 Ti10     V3    10.004   1_446     S
+Ti10     V6    10.004   1_545     S
+Ti10     V4    10.004   1_455     S
+Ti10     V9    10.004   1_445     S
+Ti10     V3    10.004   1_445     S

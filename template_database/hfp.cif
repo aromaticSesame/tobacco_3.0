@@ -1,5 +1,5 @@
 data_hfp
-_audit_creation_date              2020-01-20
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -65,8 +65,8 @@ Ce3     Ti7    9.963   .     S
 Ce3     Ti8    9.963   .     S
 Ce3     V23    10.037   1_565     S
 Ce3     V24    10.037   1_565     S
-Ce3     Er9    10.037   1_554     S
 Ce3     Er9    10.037   .     S
+Ce3     Er9    10.037   1_554     S
 Ti4     Ce6    9.963   .     S
 Ti4     Ce5    9.963   1_455     S
 Ti4     Ce1    9.962   1_456     S
@@ -81,8 +81,8 @@ Ce5     V11    10.037   1_556     S
 Ce5     V12    10.037   .     S
 Ce6     Ti7    9.962   .     S
 Ce6     Ti8    9.962   1_556     S
-Ce6     Er10    10.037   .     S
 Ce6     Er10    10.037   1_556     S
+Ce6     Er10    10.037   .     S
 Ce6     V12    10.037   .     S
 Ce6     V11    10.037   1_556     S
 Ti8     Ce5    9.962   1_554     S
@@ -90,8 +90,8 @@ Ti8     Ce6    9.962   1_554     S
 Er9     Ce3    10.037   1_556     S
 Er9     Ce1    10.037   1_556     S
 Er10     Ce6    10.037   1_554     S
-Er10     Ce5    10.037   1_454     S
 Er10     Ce5    10.037   1_455     S
+Er10     Ce5    10.037   1_454     S
 V11     Ce6    10.037   1_554     S
 V11     Ce5    10.037   1_554     S
 V11     Ce14    10.037   .     S
@@ -108,8 +108,8 @@ Ce14     Ti16    9.962   1_554     S
 Ce14     Ti15    9.962   .     S
 Ce14     Ti19    9.963   1_655     S
 Ce14     Ti20    9.963   1_655     S
-Ce14     Er21    10.037   1_654     S
 Ce14     Er21    10.037   1_655     S
+Ce14     Er21    10.037   1_654     S
 Ti15     Ce18    9.963   .     S
 Ti15     Ce17    9.963   .     S
 Ti16     Ce18    9.963   .     S
@@ -118,8 +118,8 @@ Ti16     Ce13    9.962   1_556     S
 Ti16     Ce14    9.962   1_556     S
 Ce17     Ti19    9.962   1_655     S
 Ce17     Ti20    9.962   1_656     S
-Ce17     Er22    10.037   .     S
 Ce17     Er22    10.037   1_556     S
+Ce17     Er22    10.037   .     S
 Ce17     V24    10.037   1_655     S
 Ce17     V23    10.037   1_656     S
 Ce18     Ti20    9.962   1_556     S

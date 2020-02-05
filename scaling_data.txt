@@ -1,0 +1,2 @@
+ab_ratio_i ab_ratio_f ac_ratio_i ac_ratio_f bc_ratio_i bc_ratio_f alpha_i alpha_f beta_i beta_f gamma_i gamma_f average_covec final_obj
+ffc_1 1.0 0.999995671665 2.23389064679 2.13086990166 2.23389064679 2.13087912482 90.0 90.0000239481 90.0 89.9999762034 90.0 89.9999982905 0.0214224581414 5843.08206242

@@ -1,5 +1,5 @@
 data_sln
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -41,17 +41,17 @@ _ccdc_geom_bond_type
 Er1     Ti3    10.0   1_545     S
 Er1     Ti12    10.0   1_554     S
 Er1     Ti12    10.0   .     S
-Ti2     Er9    10.0   1_554     S
 Ti2     Er9    10.0   .     S
+Ti2     Er9    10.0   1_554     S
 Ti2     V4    10.0   .     S
 Ti2     Er7    10.0   1_455     S
 Ti3     Er1    10.0   1_565     S
-Ti3     Er8    10.0   1_554     S
 Ti3     Er8    10.0   .     S
+Ti3     Er8    10.0   1_554     S
 Ti3     V4    10.0   .     S
 V4     Ti5    10.0   .     S
-Ti5     Er14    10.0   1_554     S
 Ti5     Er14    10.0   .     S
+Ti5     Er14    10.0   1_554     S
 Ti5     Er6    10.0   .     S
 Er6     Ti10    10.0   1_554     S
 Er6     Ti10    10.0   .     S

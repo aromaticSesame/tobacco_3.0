@@ -1,5 +1,5 @@
 data_atoe
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -130,9 +130,9 @@ Ti6     Er13    10.0   .     S
 Ti6     Ce8    10.0   1_556     S
 Ti6     Er13    10.0   1_556     S
 Ti6     V49    10.0   .     S
-Ti7     Er11    10.0   1_554     S
-Ti7     Ce9    10.0   1_554     S
 Ti7     Er11    10.0   .     S
+Ti7     Ce9    10.0   1_554     S
+Ti7     Er11    10.0   1_554     S
 Ti7     V25    10.0   1_554     S
 Ti7     V50    10.0   .     S
 Ce8     Er12    10.0   1_554     S
@@ -180,9 +180,9 @@ Ce17     V23    10.0   .     S
 Ce17     V26    10.0   .     S
 Ce17     Er22    10.0   .     S
 Ce17     Ti19    10.0   .     S
-Ti18     Er20    10.0   1_554     S
-Ti18     Ce17    10.0   1_554     S
 Ti18     Er20    10.0   .     S
+Ti18     Ce17    10.0   1_554     S
+Ti18     Er20    10.0   1_554     S
 Ti18     V26    10.0   1_554     S
 Ti18     V53    10.0   .     S
 Ti19     Er22    10.0   1_554     S
@@ -249,15 +249,15 @@ Ti33     Er36    10.0   1_554     S
 Ti33     Ce32    10.0   1_545     S
 Ti33     Er36    10.0   .     S
 Ti34     Ce29    10.0   1_566     S
-Ti34     Er37    10.0   .     S
 Ti34     Er37    10.0   1_556     S
+Ti34     Er37    10.0   .     S
 Ti34     V38    10.0   .     S
 Er35     Ce29    10.0   1_556     S
 Er35     Ti31    10.0   1_556     S
 Er35     V51    10.0   1_556     S
 Er36     V1    10.0   1_545     S
-Er36     Ce32    10.0   1_545     S
 Er36     Ti33    10.0   1_556     S
+Er36     Ce32    10.0   1_545     S
 Er37     V28    10.0   1_554     S
 Er37     Ce29    10.0   1_565     S
 Er37     Ti34    10.0   1_554     S
@@ -273,14 +273,14 @@ Ce40     Er45    10.0   1_655     S
 Ce40     Ti42    10.0   1_656     S
 Ce40     Er47    10.0   .     S
 Ce40     Ti41    10.0   .     S
-Ti41     Er47    10.0   1_554     S
-Ti41     Ce43    10.0   1_655     S
 Ti41     Er47    10.0   .     S
+Ti41     Ce43    10.0   1_655     S
+Ti41     Er47    10.0   1_554     S
 Ti41     V52    10.0   .     S
 Ti42     V26    10.0   1_454     S
-Ti42     Er45    10.0   1_554     S
-Ti42     Ce40    10.0   1_454     S
 Ti42     Er45    10.0   .     S
+Ti42     Ce40    10.0   1_454     S
+Ti42     Er45    10.0   1_554     S
 Ce43     Er47    10.0   1_454     S
 Ce43     Ti41    10.0   1_455     S
 Ce43     V27    10.0   1_554     S
@@ -333,9 +333,9 @@ Ti56     Er61    10.0   .     S
 Ti56     Ce55    10.0   1_556     S
 Ti56     Er61    10.0   1_556     S
 Ti57     V3    10.0   1_454     S
-Ti57     Er60    10.0   1_554     S
-Ti57     Ce58    10.0   1_454     S
 Ti57     Er60    10.0   .     S
+Ti57     Ce58    10.0   1_454     S
+Ti57     Er60    10.0   1_554     S
 Ce58     Er60    10.0   1_655     S
 Ce58     Ti57    10.0   1_656     S
 Ce58     V63    10.0   .     S
@@ -373,8 +373,8 @@ Ce67     Ti69    10.0   1_565     S
 Ce67     Er72    10.0   .     S
 Ce67     Ti68    10.0   .     S
 Ti68     Ce64    10.0   1_566     S
-Ti68     Er72    10.0   .     S
 Ti68     Er72    10.0   1_556     S
+Ti68     Er72    10.0   .     S
 Ti69     V3    10.0   1_554     S
 Ti69     V53    10.0   1_545     S
 Ti69     Ce66    10.0   1_554     S
@@ -382,8 +382,8 @@ Ti69     Er70    10.0   1_554     S
 Ti69     Ce67    10.0   1_545     S
 Ti69     Er70    10.0   .     S
 Er70     V53    10.0   1_545     S
-Er70     Ce67    10.0   1_545     S
 Er70     Ti69    10.0   1_556     S
+Er70     Ce67    10.0   1_545     S
 Er71     V51    10.0   1_556     S
 Er71     Ce64    10.0   1_556     S
 Er71     Ti65    10.0   1_556     S

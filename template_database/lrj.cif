@@ -1,5 +1,5 @@
 data_lrj
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -57,8 +57,8 @@ _geom_bond_distance
 _geom_bond_site_symmetry_2
 _ccdc_geom_bond_type
 Er1     Er2    10.0   .     S
-Er1     Er3    10.0   .     S
 Er1     Er3    10.0   1_655     S
+Er1     Er3    10.0   .     S
 Er1     V8    10.0   .     S
 Er2     Er4    10.0   .     S
 Er2     Er4    10.0   1_655     S
@@ -78,8 +78,8 @@ V7     V5    10.0   1_645     S
 V7     Er19    10.0   .     S
 V8     V6    10.0   1_645     S
 Er9     Er10    10.0   .     S
-Er9     Er11    10.0   1_455     S
 Er9     Er11    10.0   .     S
+Er9     Er11    10.0   1_455     S
 Er9     V24    10.0   .     S
 Er10     Er12    10.0   1_455     S
 Er10     Er12    10.0   .     S
@@ -102,8 +102,8 @@ Er17     Er18    10.0   .     S
 Er17     Er19    10.0   1_455     S
 Er17     Er19    10.0   .     S
 Er17     V21    10.0   1_455     S
-Er18     Er20    10.0   1_455     S
 Er18     Er20    10.0   .     S
+Er18     Er20    10.0   1_455     S
 Er18     V32    10.0   .     S
 Er19     Er20    10.0   .     S
 Er19     Er17    10.0   1_655     S
@@ -116,8 +116,8 @@ V22     Er3    10.0   1_655     S
 V23     V24    10.0   .     S
 V23     Er25    10.0   .     S
 Er25     Er26    10.0   .     S
-Er25     Er27    10.0   1_455     S
 Er25     Er27    10.0   .     S
+Er25     Er27    10.0   1_455     S
 Er26     Er28    10.0   1_455     S
 Er26     Er28    10.0   .     S
 Er26     V30    10.0   1_455     S

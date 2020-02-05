@@ -1,5 +1,5 @@
 data_wkw
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -55,8 +55,8 @@ V3     V1    10.0   1_655     S
 V3     V12    10.0   1_654     S
 V3     V2    10.0   1_654     S
 V3     V8    10.0   1_554     S
-V3     V4    10.0   1_554     S
 V3     V4    10.0   .     S
+V3     V4    10.0   1_554     S
 V3     V5    10.0   1_545     S
 V3     V9    10.0   .     S
 V4     V2    10.0   1_655     S
@@ -70,8 +70,8 @@ V5     V3    10.0   1_565     S
 V5     V8    10.0   1_564     S
 V5     V12    10.0   1_554     S
 V5     V7    10.0   1_565     S
-V5     V6    10.0   1_554     S
 V5     V6    10.0   .     S
+V5     V6    10.0   1_554     S
 V5     V9    10.0   .     S
 V6     V4    10.0   1_565     S
 V6     V7    10.0   1_565     S
@@ -96,8 +96,8 @@ V8     V12    10.0   .     S
 V9     V1    10.0   1_655     S
 V9     V12    10.0   1_554     S
 V9     V11    10.0   .     S
-V9     V10    10.0   1_554     S
 V9     V10    10.0   .     S
+V9     V10    10.0   1_554     S
 V10     V2    10.0   1_655     S
 V10     V11    10.0   .     S
 V10     V12    10.0   .     S

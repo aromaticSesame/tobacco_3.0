@@ -177,25 +177,23 @@ for i in range(0,len(topologies_all)):
 	pm_structure.merge_sites(mode='delete')	
 
 	#Calculate distance between edge centers and edge ends
-	dummy_edges = pm.Structure(lattice_vectors,[edge_center_name]*len(edges_head),edges_head)
-	dummy_centers = pm.Structure(lattice_vectors,[edge_center_name]*len(edges_center),edges_center)
-	d_tests = []
-	for j, dummy_center in enumerate(dummy_centers):
-		d_test = 2*dummy_center.distance(dummy_edges[j])
-		d_tests.append(d_test)
+	bd_list = []
+	for j, edge_center_pos in enumerate(edges_center):
+		n_edge_type = len(pm.Structure.from_spacegroup(group,lattice_vectors,[edge_center_name],[edge_center_pos]))
+		dummy_edge = pm.Structure(lattice_vectors,[edge_center_name],[edges_head[j]])[0]
+		dummy_center = pm.Structure(lattice_vectors,[edge_center_name],[edge_center_pos])[0]
+		bd_list.extend([2*dummy_center.distance(dummy_edge)]*n_edge_type)
 
-	#Defined bond distance as 2*distance between edge centers and edge ends (i.e. vertices)
-	bond_dists = [] 
-	if np.abs(np.max(d_tests)-np.min(d_tests)) < 2*tol:
-		bond_dists.append(np.average(d_tests))
-	else:
-		bond_dists.extend(d_tests)
+	_, unique_indices = np.unique(bd_list, return_index=True)
+	unique_bond_dists = np.array(bd_list)[np.sort(unique_indices)].tolist()
+	if np.abs(np.max(unique_bond_dists)-np.min(unique_bond_dists)) < tol:
+		unique_bond_dists = [np.average(unique_bond_dists)]
 
 	#Make lattice constants > bond dist
-	if np.max(bond_dists) < scale:
+	if np.max(unique_bond_dists) < scale:
 		extend = tol+scale
 	else:
-		extend = tol+np.max(bond_dists)
+		extend = tol+np.max(unique_bond_dists)
 	n_supercells = [np.ceil(extend/cellpars[0]),np.ceil(extend/cellpars[1]),np.ceil(extend/cellpars[2])]
 	if n_supercells != [1,1,1]:
 		pm_structure.make_supercell(n_supercells)
@@ -217,6 +215,8 @@ for i in range(0,len(topologies_all)):
 	bonded_edge_centers = [] #list for the indices of bonded edge centers
 	img_list = [] #list of image displacements
 	d_list = [] #list of bond distances
+	bonded_set_all = [] #list of all bonded sets
+	bonded_edges_all = [] #list of all edges involved in bonds
 
 	#Cycle through every vertex to find its bonded atoms
 	for j, vertex_idx in enumerate(vertices_indices):
@@ -231,24 +231,13 @@ for i in range(0,len(topologies_all)):
 		
 		#Find all edge centers connected to vertex j
 		edge_overlap_indices = []
-		for bond_dist in bond_dists:
+		for bond_dist in unique_bond_dists:
 			edges_shell_temp = pm_structure.get_neighbors_in_shell(pm_structure[vertex_idx].coords,bond_dist/2,tol,include_index=True)
-			edges_shell = [k for k in edges_shell_temp if k[0].species_string == edge_center_name]
+			edges_shell = [k for k in edges_shell_temp if k[0].species_string == edge_center_name]# and bond_dists[k[2]] == bond_dist]
 			for edge_shell in edges_shell:
 				if edge_shell[2] not in edge_overlap_indices:
 					edge_overlap_indices.append(edge_shell[2])
-
-		#Check if an edge center must be counted again due to PBCs
-		edge_overlap_to_add = []
-		for edge_overlap_idx in edge_overlap_indices:
-			edge_overlap_atom = pm_structure[edge_overlap_idx]
-
-			d_vec = vertex_atom.coords-edge_overlap_atom.coords
-			dummy_atom = pm.Structure(pm_structure.lattice.matrix,[edge_center_name],[edge_overlap_atom.coords+d_vec*2],coords_are_cartesian=True)
-			
-			if edge_overlap_atom.is_periodic_image(dummy_atom[0],tolerance=tol):
-				edge_overlap_to_add.append(edge_overlap_idx)
-		edge_overlap_indices += edge_overlap_to_add
+		edge_overlap_indices.sort()
 
 		#Make sure the right number of edges are detected
 		if len(edge_overlap_indices) != cn:
@@ -257,41 +246,48 @@ for i in range(0,len(topologies_all)):
 			bad = True
 			break
 
-		#Find all vertices bound to vertex j
+		#Generate bond info
 		vertex_overlap_indices = []
 		bonded_set = []
-		for bond_dist in bond_dists:
+		for bond_dist in unique_bond_dists:
 
-			#Get all vertices in bond_dist to vertex j
-			vertices_shell_temp = pm_structure.get_neighbors_in_shell(pm_structure[vertex_idx].coords,bond_dist,2*tol,include_index=True,include_image=True)	
-			vertices_shell = [k for k in vertices_shell_temp if k[0].species_string != edge_center_name]
-			vertices_shell_indices = [k[2] for k in vertices_shell]
+			big_vertices_temp = pm_structure.get_neighbors_in_shell(pm_structure[vertex_idx].coords,bond_dist,2*tol,include_index=True,include_image=True)
+			big_vertices = [k for k in big_vertices_temp if k[0].species_string != edge_center_name and k[2] != vertex_idx]
+			big_vertices_indices = [b[2] for b in big_vertices]
 
-			#For each edge connected to vertex j
-			for edge_overlap_idx in edge_overlap_indices:
+			#Cycle through every edge center connected to vertex j
+			for edge2_index in edge_overlap_indices:
 
-				#Get all vertices in bond_dist/2 to edge center that are also within bond_dist to vertex j
-				vertices_shell2_temp = pm_structure.get_neighbors_in_shell(pm_structure[edge_overlap_idx].coords,bond_dist/2,tol,include_index=True)
-				vertices_shell2_indices = [k[2] for k in vertices_shell2_temp if k[0].species_string != edge_center_name and k[2] in vertices_shell_indices]
+				edge_overlap_atom = pm_structure[edge2_index]
 
-				#For every bonded vertex, get properties
-				for vertex2_idx in vertices_shell2_indices:
+				#Find bonded vertex connecting j and edge center
+				vertices_shell_temp = pm_structure.get_neighbors_in_shell(edge_overlap_atom.coords,bond_dist/2,tol,include_index=True)	
+				vertices_shell = [k for k in vertices_shell_temp if k[0].species_string != edge_center_name and k[2] in big_vertices_indices]
+				if len(vertices_shell) != 1:
+					continue
+				bonded_vertex_idx = vertices_shell[0][2]
 
-					#Get properties of the bonded vertex, but don't double-count entries
-					locs = np.where(vertices_shell_indices==vertex2_idx)[0].tolist()
-					for loc in locs:
-						bonded_vertex = vertices_shell[loc]
-						img_temp = bonded_vertex[3].tolist()
-						img = [int(ii) for ii in img_temp]
-						bonded_set_temp = [vertex_idx,bonded_vertex[2],img]
-						if bonded_set_temp not in bonded_set:
-							bonded_set.append(bonded_set_temp)
-							vertex_overlap_indices.append(bonded_vertex[2])
-							img_list.append(img)
-							d_list.append(pm_structure.get_distance(vertex_idx,bonded_vertex[2],jimage=img))
-							break
-						else:
-							continue
+				#Get the image of the bond
+				possible_images = [k for k in big_vertices if k[2] == bonded_vertex_idx]
+				for possible_image in possible_images:
+					dummy_pos = vertex_atom.coords+(possible_image[0].coords-vertex_atom.coords)/2
+					dummy_atom = pm.Structure(pm_structure.lattice.matrix,[edge_center_name],[dummy_pos],coords_are_cartesian=True)
+					if edge_overlap_atom.is_periodic_image(dummy_atom[0],tolerance=2*tol):
+						img_temp = possible_image[3].tolist()
+						d_img = possible_image[1]
+						z = [vertex_idx,bonded_vertex_idx,img_temp]
+						break
+				if not img_temp:
+					raise ValueError('Could not find image')
+				if z in bonded_set_all:
+					continue
+
+				#Store results
+				bonded_set.append(z)
+				bonded_set_all.append(z)
+				vertex_overlap_indices.append(bonded_vertex_idx)
+				img_list.append([int(ii) for ii in img_temp])
+				d_list.append(d_img)
 
 		#Check coordination number
 		if len(vertex_overlap_indices) != cn:

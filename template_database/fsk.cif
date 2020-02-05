@@ -1,5 +1,5 @@
 data_fsk
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -37,21 +37,21 @@ _geom_bond_distance
 _geom_bond_site_symmetry_2
 _ccdc_geom_bond_type
 Ti1     V5    10.0   1_554     S
-Ti1     V9    10.0   1_655     S
 Ti1     V9    10.0   1_665     S
+Ti1     V9    10.0   1_655     S
 Ti1     Er6    10.0   .     S
 Ti2     V3    10.0   .     S
-Ti2     V11    10.0   1_545     S
 Ti2     V11    10.0   .     S
+Ti2     V11    10.0   1_545     S
 Ti2     Er4    10.0   .     S
-V3     Er6    10.0   1_545     S
 V3     Er6    10.0   .     S
+V3     Er6    10.0   1_545     S
 V3     Er4    10.0   1_554     S
-V3     Ti7    10.0   1_545     S
 V3     Ti7    10.0   .     S
+V3     Ti7    10.0   1_545     S
 Er4     V3    10.0   1_556     S
-Er4     V5    10.0   1_545     S
 Er4     V5    10.0   .     S
+Er4     V5    10.0   1_545     S
 V5     Ti1    10.0   1_556     S
 V5     Er4    10.0   1_565     S
 V5     Er6    10.0   .     S
@@ -62,8 +62,8 @@ Ti7     V11    10.0   .     S
 Ti7     V3    10.0   1_565     S
 Ti7     Er12    10.0   .     S
 Ti8     V9    10.0   1_556     S
-Ti8     V5    10.0   1_445     S
 Ti8     V5    10.0   1_455     S
+Ti8     V5    10.0   1_445     S
 Ti8     Er10    10.0   .     S
 V9     Ti1    10.0   1_445     S
 V9     Ti1    10.0   1_455     S

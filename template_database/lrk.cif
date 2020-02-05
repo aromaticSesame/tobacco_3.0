@@ -1,5 +1,5 @@
 data_lrk
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -144,11 +144,11 @@ Ti32     Er33    10.001   .     S
 Er33     Er34    10.0   .     S
 Er34     Ti36    10.001   .     S
 Ti35     Ti36    10.0   .     S
-Ti35     Ti37    10.0   .     S
 Ti35     Ti37    10.0   1_655     S
+Ti35     Ti37    10.0   .     S
 Ti35     Er39    10.001   .     S
-Ti36     Ti38    10.0   .     S
 Ti36     Ti38    10.0   1_655     S
+Ti36     Ti38    10.0   .     S
 Ti37     Er27    10.001   1_455     S
 Ti37     Ti35    10.0   1_455     S
 Ti37     Ti38    10.0   .     S

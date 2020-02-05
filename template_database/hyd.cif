@@ -1,5 +1,5 @@
 data_hyd
-_audit_creation_date              2020-01-19
+_audit_creation_date              2020-02-02
 _audit_creation_method            'Pymatgen'
 _symmetry_space_group_name_H-M    'P1'
 _symmetry_Int_Tables_number       1
@@ -72,27 +72,27 @@ V5     Er9    9.998   1_665     S
 V5     Ce10    10.004   1_554     S
 Er6     V7    9.998   1_565     S
 Er6     V8    9.998   1_465     S
-Er6     V5    10.001   1_455     S
-Er6     V5    9.995   1_456     S
 Er6     V4    9.995   1_556     S
+Er6     V5    9.995   1_456     S
+Er6     V5    10.001   1_455     S
 Er6     Ti24    10.008   .     S
-V7     V4    9.998   1_545     S
-V7     Er6    9.998   1_545     S
 V7     V4    9.998   1_546     S
+V7     Er6    9.998   1_545     S
+V7     V4    9.998   1_545     S
 V7     Er9    9.995   .     S
 V7     V8    9.997   1_455     S
 V7     Er9    10.001   1_556     S
-V8     V5    9.998   1_545     S
-V8     Er6    9.998   1_645     S
 V8     V5    9.998   1_546     S
+V8     Er6    9.998   1_645     S
+V8     V5    9.998   1_545     S
 V8     Er9    9.995   1_655     S
 V8     V7    9.997   1_655     S
 V8     Er9    10.001   1_656     S
 Er9     V5    9.998   1_445     S
 Er9     V4    9.998   1_545     S
+Er9     V8    9.995   1_455     S
 Er9     V7    10.001   1_554     S
 Er9     V8    10.001   1_454     S
-Er9     V8    9.995   1_455     S
 Er9     Ti15    10.008   .     S
 Ce10     Ti12    10.002   .     S
 Ce10     Ce11    9.998   .     S
@@ -122,8 +122,8 @@ V17     Er21    9.998   .     S
 V17     Ce22    10.004   .     S
 Er18     V20    9.998   .     S
 Er18     V19    9.998   .     S
-Er18     V16    10.001   1_554     S
 Er18     V17    10.001   1_554     S
+Er18     V16    10.001   1_554     S
 V19     Ce14    10.004   1_554     S
 V19     V16    9.998   1_554     S
 V19     Er21    9.995   1_554     S
